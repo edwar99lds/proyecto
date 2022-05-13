@@ -1,0 +1,155 @@
+
+
+<nav>
+    <div class="teal darken-4 nav-wrapper">
+        <a href="#" class="brand-logo">Proyecto de lenguajes</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Grupo 2</a></li>
+            <li><a href="badges.html">Semestre</a></li>
+            <li><a href="collapsible.html">2022-2</a></li>
+        </ul>
+    </div>
+</nav>
+
+<br>
+<!-- Cajas de texto -->
+<!-- <label>Terminales</label>
+<div><input type="text" [(ngModel)]="terminales"></div> -->
+<div class="container">
+    <div class="row">
+        <div class="col l6 s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" [(ngModel)]="terminales">
+                    <label>TERMINALES</label>
+                </div>
+            </div>
+
+            <!--<br>
+    <label>No terminales</label>
+    <div><input type="text" [(ngModel)]="noTerminales"></div>
+    <br>-->
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" [(ngModel)]="noTerminales">
+                    <label>NO TERMINALES</label>
+                </div>
+            </div>
+
+            <!--<label>Inicial</label>
+    <div><input type="text" [(ngModel)]="inicial"></div>
+    <br>-->
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" [(ngModel)]="inicial">
+                    <label>INICIAL</label>
+                </div>
+            </div>
+
+            <!--<label>Gramatica</label>
+    <div>
+        <textarea name="comentarios" rows="10" cols="40" [(ngModel)]="caja_texto">Escribir aqui la gramatica</textarea>
+    </div>-->
+            <div class="row">
+                <div class="input-field col s6">
+                    <textarea name="comentarios" rows="10" cols="40" [(ngModel)]="caja_texto">Escribir aqui la gramatica</textarea>
+                    <label>Gramatica</label>
+                </div>
+            </div>
+
+
+            <button (click)="correMetodos()" class="teal darken-4 btn waves-effect waves-light btn-large" type="submit"
+                name="action">
+                <i class="material-icons right">ENVIAR</i>
+            </button>
+        </div>
+
+        <div class="col l4 offset-l2 s12">
+            <div class="row">
+                <h3>Ejemplo</h3>
+                Terminales: abcde-*()+z/
+                <br>
+                No terminales: SABCD
+                <br>
+                Inicial: S
+                <br>
+                Gramatica: 
+                <br>
+                S=>BA
+                <br>
+                A=>+BA
+                <br>
+                A=>-BA
+                <br>
+                A=>#
+                <br>
+                B=>DC
+                <br>
+                C=>*DC
+                <br>
+                C=>/DC
+                <br>
+                C=>#
+                <br>
+                D=>(S)
+                <br>
+                D=>a
+                <br>
+                D=>z
+                <br>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Texto que muestra la info -->
+<div class="row">
+<div class="row">
+    <h3>Primeros: </h3>
+    <span *ngFor="let item of primeros | keyvalue">
+        <div>
+            <h4>{{item.key}} => {{item.value}}</h4>
+        </div>
+
+    </span>
+</div>
+
+<div class="row">
+    <h3>Siguiente: </h3>
+    <span *ngFor="let item of siguientes | keyvalue">
+        <div>
+            <h4>{{item.key}} => {{item.value}}</h4>
+        </div>
+    </span>
+</div>
+
+</div>
+
+
+<footer class="teal darken-4 page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Proyecto de lenguajes</h5>
+                <p class="grey-text text-lighten-4">Analizador de gramaticas LL1.
+                </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Participantes: </h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">EDWAR ANDRES MARIN MORALES</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">NICOLAS ESTUPIÑAN JAIME</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2014 Copyright Text
+        </div>
+    </div>
+</footer>
